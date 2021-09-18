@@ -1,1 +1,1 @@
-web: gunicorn python_hotels_bot:main.py
+web: gunicorn python-hotel-bot:main.py
