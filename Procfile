@@ -1,1 +1,1 @@
-web: gunicorn python-hotel-bot:main.py
+web: python3 main.py
