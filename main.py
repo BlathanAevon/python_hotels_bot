@@ -1,7 +1,7 @@
 from bot_class import HotelBot, types
 from flask import Flask, request
 from dotenv import load_dotenv
-from typing import Callable
+from typing import Callable, Any
 import api_requests as req
 from loguru import logger
 import functools
@@ -189,7 +189,7 @@ def get_hotels(message: types.Message) -> None:
             logger.error('Error while trying a print hotels to chat')
         else:
             logger.info(f'User {message.chat.id}. Hotels block done without errors!')
-            
+
 
 if __name__ == "__main__":
     logger.add('bot_info.log', filter=lambda x: x['level'].name == 'INFO', retention="7 days")
